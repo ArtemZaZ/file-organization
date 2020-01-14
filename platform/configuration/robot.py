@@ -20,8 +20,9 @@ def rotate(speed):
 
 
 def setCamera(scale):
+    scale = min(max(-1, scale), 1)
     robot.beep()
-    robot.setServo0(middleServoPos - scale*servoPosLen)
+    robot.setServo0(int(middleServoPos - scale*servoPosLen))
 
 
 def initializeAll():
