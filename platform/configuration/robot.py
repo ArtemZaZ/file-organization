@@ -22,7 +22,7 @@ def rotate(speed):
 def setCamera(scale):
     scale = min(max(-1, scale), 1)
     robot.beep()
-    robot.setServo0(int(middleServoPos - scale*servoPosLen))
+    robot.setServo0(int(middleServoPos - scale * servoPosLen))
 
 
 def initializeAll():
@@ -37,3 +37,13 @@ def initializeAll():
 
 def release():
     robot.exit()
+
+
+@property
+def online():
+    return robot.online
+
+
+@online.setter
+def online(val):
+    robot.online = val
