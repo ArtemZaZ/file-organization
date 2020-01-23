@@ -1,5 +1,5 @@
 """ Конфигурация робота """
-from edubot import EduBot, MotorMode
+from configuration.edubot import EduBot, MotorMode
 import smbus
 
 servoPosLen = 255
@@ -47,3 +47,5 @@ def online():
 @online.setter
 def online(val):
     robot.online = val
+
+
